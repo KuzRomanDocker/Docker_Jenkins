@@ -4,9 +4,9 @@ dev:
     enableGithubPolling:  false
     daysBuildsKeep:       '1'
     numberBuildsKeep:     '5'
-    githubRepoUrl:        'https://github.com/KuzRomanDocker/springboot'
-    githubRepo:           'https://github.com/KuzRomanDocker/springboot.git'
-    githubBranch:         '*/main'
+    githubRepoUrl:        'https://github.com/KuzRomanDocker/Docker_Jenkins'
+    githubRepo:           'https://github.com/KuzRomanDocker/Docker_Jenkins.git'
+    githubBranch:         '*/master'
     credentialId:         ''
     jenkinsfilePath:      'Jenkinsfile'
   CopyAPP:
@@ -14,8 +14,8 @@ dev:
     enableGithubPolling:  false
     daysBuildsKeep:       '1'
     numberBuildsKeep:     '5'
-    githubRepoUrl:        'https://github.com/KuzRomanDocker/springboot'
-    githubRepo:           'https://github.com/KuzRomanDocker/springboot.git'
-    githubBranch:         '*/main'
+    githubRepoUrl:        'https://github.com/KuzRomanDocker/Docker_Jenkins'
+    githubRepo:           'https://github.com/KuzRomanDocker/Docker_Jenkins.git'
+    githubBranch:         '*/master'
     credentialId:         ''
     jenkinsfilePath:      '/DeployTOAppServer/Jenkinsfile'
