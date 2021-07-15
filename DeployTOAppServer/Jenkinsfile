@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+   stages {
+        stage('Copy Archive') {
+            steps {
+               copyArtifacts filter: 'target/*.jar', fingerprintArtifacts: true, projectName: 'SpringBoot', selector: lastSuccessful()
+                }
+            }
+        stage('Copy to remote server') {
+            steps{
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'APP', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: ' systemctl status spring', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'target/*.jar')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+            }
+        }
+   }
+}

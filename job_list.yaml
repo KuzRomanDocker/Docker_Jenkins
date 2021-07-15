@@ -1,0 +1,21 @@
+dev:
+  SpringBoot:
+    jobDisabled:          false
+    enableGithubPolling:  false
+    daysBuildsKeep:       '1'
+    numberBuildsKeep:     '5'
+    githubRepoUrl:        'https://github.com/KuzRomanDocker/springboot'
+    githubRepo:           'https://github.com/KuzRomanDocker/springboot.git'
+    githubBranch:         '*/main'
+    credentialId:         ''
+    jenkinsfilePath:      'Jenkinsfile'
+  CopyAPP:
+    jobDisabled:          false
+    enableGithubPolling:  false
+    daysBuildsKeep:       '1'
+    numberBuildsKeep:     '5'
+    githubRepoUrl:        'https://github.com/KuzRomanDocker/springboot'
+    githubRepo:           'https://github.com/KuzRomanDocker/springboot.git'
+    githubBranch:         '*/main'
+    credentialId:         ''
+    jenkinsfilePath:      '/DeployTOAppServer/Jenkinsfile'
