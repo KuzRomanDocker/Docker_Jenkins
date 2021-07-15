@@ -3,7 +3,7 @@ pipeline {
    stages {
         stage('Copy Archive') {
             steps {
-               copyArtifacts filter: 'target/*.jar', fingerprintArtifacts: true, projectName: 'SpringBoot', selector: lastCompleted()
+               copyArtifacts filter: 'target/*.jar', fingerprintArtifacts: true, projectName: 'SpringBoot', selector: lastWithArtifacts()
                 }
             }
         stage('Copy to remote server') {
